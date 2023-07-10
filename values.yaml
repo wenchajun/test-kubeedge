@@ -1,8 +1,8 @@
 backend:
   enabled: true
-  cloudcore:
-    cloudCore:
-      modules:
-        cloudHub:
-          advertiseAddress:
-            - ""
+cloudcore:
+  cloudCore:
+    modules:
+      cloudHub:
+        advertiseAddress:
+          - "xxxxx"
