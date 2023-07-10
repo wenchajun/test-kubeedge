@@ -24,6 +24,7 @@ rules:
       - 'configmaps'
       - 'secrets'
       - 'services'
+      - 'serviceaccounts'
   - verbs:
       - '*'
     apiGroups:
