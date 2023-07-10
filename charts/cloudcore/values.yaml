@@ -134,7 +134,7 @@ controllerManager:
       cpu: 100m
       memory: 25Mi
       
- edgeService:
+edgeService:
   replicaCount: 1
   image:
     repository: "kubesphere/edgeservice"
