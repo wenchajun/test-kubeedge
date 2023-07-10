@@ -1,4 +1,4 @@
-backend:
+kubeedge:
   enabled: true
 cloudcore:
   cloudCore:

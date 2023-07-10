@@ -26,6 +26,6 @@ kubeVersion: ">=1.19.0"
 ksVersion: ">=3.0.0"
 staticFileDirectory: static
 dependencies:
-  - name: backend
-    condition: backend.enabled
+  - name: kubeedge
+    condition: kubeedge.enabled
 icon: ./static/favicon.svg
