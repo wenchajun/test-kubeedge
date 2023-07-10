@@ -1,32 +1,40 @@
 kind: ClusterRole
 rules:
   - verbs:
-      - 'create'
-      - 'patch'
-      - 'update'
-      - 'get'
+      - '*'
     apiGroups:
       - 'extensions.kubesphere.io'
     resources:
       - '*'
-
----
-kind: Role
-rules:
+  - verbs:
+      - '*'
+    apiGroups:
+      - 'apps.kubeedge.io'
+      - 'reliablesyncs.kubeedge.io'
+      - 'devices.kubeedge.io'
+      - 'operations.kubeedge.io'
+      - 'rules.kubeedge.io'   
+    resources:
+      - '*'
   - verbs:
       - '*'
     apiGroups:
       - ''
-      - 'apps'
-      - 'batch'
-      - 'app.k8s.io'
-      - 'autoscaling'
     resources:
-      - '*'
+      - 'configmaps'
+      - 'secrets'
+      - 'services'
   - verbs:
       - '*'
     apiGroups:
-      - 'networking.k8s.io'
+      - 'apps'
     resources:
-      - 'ingresses'
-      - 'networkpolicies'
+      - 'deployments'
+      - 'daemonsets'
+  - verbs:
+      - '*'
+    apiGroups:
+      - 'admissionregistration.k8s.io'
+      - 'rbac.authorization.k8s.io'
+    resources:
+      - '*'
