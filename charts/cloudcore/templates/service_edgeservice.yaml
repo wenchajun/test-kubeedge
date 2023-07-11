@@ -5,6 +5,7 @@ metadata:
   labels: {{- toYaml . | nindent 4 }}
   {{- end }}
   name: edgeservice
+  namespace: {{ template "cloudcore.namespace" . }}
 spec:
   ports:
   - name: http

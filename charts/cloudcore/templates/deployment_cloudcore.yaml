@@ -8,6 +8,7 @@ metadata:
   labels: {{- toYaml . | nindent 4 }}
   {{- end }}
   name: cloudcore
+  namespace: {{ template "cloudcore.namespace" . }}
 spec:
   replicas: {{ .Values.cloudCore.replicaCount }}
   selector:

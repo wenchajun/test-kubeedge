@@ -5,6 +5,7 @@ metadata:
   {{- with .Values.cloudCore.labels }}
   labels: {{- toYaml . | nindent 4 }}
   {{- end }}
+  namespace: {{ template "cloudcore.namespace" . }}
 data:
   cloudcore.yaml: |
     apiVersion: cloudcore.config.kubeedge.io/v1alpha2

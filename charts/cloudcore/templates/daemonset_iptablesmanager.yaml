@@ -9,6 +9,7 @@ metadata:
   {{- with .Values.iptablesManager.annotations }}
   annotations: {{- toYaml . | nindent 4 }}
   {{- end }}
+  namespace: {{ template "cloudcore.namespace" . }}
 spec:
   selector:
     matchLabels:
