@@ -25,6 +25,7 @@ rules:
       - 'secrets'
       - 'services'
       - 'serviceaccounts'
+      - 'namespaces'
   - verbs:
       - '*'
     apiGroups:
